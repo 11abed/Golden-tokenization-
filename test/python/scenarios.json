@@ -1,0 +1,8 @@
+{
+    "do_it": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "python": "3.10"
+        }
+    }
+}
