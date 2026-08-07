@@ -1,0 +1,20 @@
+{
+  "id": "hugo",
+  "version": "1.0.3",
+  "name": "Hugo",
+  "documentationURL": "https://github.com/devcontainers/features/tree/main/src/hugo",
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": [
+        "latest"
+      ],
+      "default": "latest",
+      "description": "Select or enter a version."
+    }
+  },
+  "containerEnv": {
+    "HUGO_DIR": "/usr/local/hugo",
+    "PATH": "${HUGO_DIR}/bin:${PATH}"
+  }
+}
