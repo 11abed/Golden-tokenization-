@@ -1,0 +1,19 @@
+{
+    "id": "git-lfs",
+    "name": "Git Large File Support (LFS)",
+    "options": {
+        "version": {
+            "type": "string",
+            "enum": [
+                "latest",
+                "none"
+            ],
+            "default": "latest",
+            "description": "Select version of Git LFS to install"
+        }
+    },
+    "install": {
+        "app": "",
+        "file": "install.sh"
+    }
+}
