@@ -1,0 +1,20 @@
+name: "Test Scenarios"
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  scenarios:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'no-ci') && !contains(github.event.head_commit.message, 'CI ignore') && !contains(github.event.head_commit.message, 'Automated documentation update')"
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Install latest devcontainer CLI"
+        run: npm install -g @devcontainers/cli
+
+      - name: "Running predefined test scenarios"
+        run: devcontainer features test --scenarios `pwd`/test-scenarios -c `pwd`
