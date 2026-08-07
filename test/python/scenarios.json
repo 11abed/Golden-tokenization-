@@ -1,0 +1,60 @@
+{
+    "install_jupyterlab_2": {
+        "image": "mcr.microsoft.com/vscode/devcontainers/python:latest",
+        "remoteUser": "vscode",
+        "features": {
+            "common-utils": {
+                "username": "vscode"
+            },
+            "python": {
+                "version": "none",
+                "installJupyterlab": true,
+                "configureJupyterlabAllowOrigin": "*"
+            }
+        }
+    },
+    "install_additional_python": {
+        "image": "ubuntu:focal",
+        "features": {
+            "python": {
+                "version": "3.10.5",
+                "additionalVersions": "3.8,3.9.13"
+            }
+        }
+    },
+    "install_jupyterlab": {
+        "image": "mcr.microsoft.com/vscode/devcontainers/base:focal",
+        "remoteUser": "vscode",
+        "features": {
+            "common-utils": {
+                "username": "vscode"
+            },
+            "python": {
+                "version": "latest",
+                "installJupyterlab": true,
+                "configureJupyterlabAllowOrigin": "*"
+            }
+        }
+    },
+    "install_jupyterlab_os_provided": {
+        "image": "mcr.microsoft.com/vscode/devcontainers/base:focal",
+        "remoteUser": "vscode",
+        "features": {
+            "common-utils": {
+                "username": "vscode"
+            },
+            "python": {
+                "version": "os-provided",
+                "installJupyterlab": true,
+                "configureJupyterlabAllowOrigin": "*"
+            }
+        }
+    },
+    "install_os_provided_python": {
+        "image": "mcr.microsoft.com/devcontainers/base:0-bullseye",
+        "features": {
+            "node": "latest",
+            "python": "os-provided"
+        }
+    }
+}
