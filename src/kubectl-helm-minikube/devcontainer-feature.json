@@ -1,0 +1,51 @@
+{
+    "id": "kubectl-helm-minikube",
+    "version": "1.0.4",
+    "name": "Kubectl, Helm, and Minkube",
+    "documentationURL": "https://github.com/devcontainers/features/tree/main/src/kubectl-helm-minikube",
+    "description": "Installs latest version of kubectl, Helm, and optionally minikube. Auto-detects latest versions and installs needed dependencies.",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none",
+                "1.23",
+                "1.22",
+                "1.21"
+            ],
+            "default": "latest",
+            "description": "Select or enter a Kubernetes version to install"
+        },
+        "helm": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Select or enter a Helm version to install"
+        },
+        "minikube": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Select or enter a Minikube version to install"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-kubernetes-tools.vscode-kubernetes-tools"
+            ]
+        }
+    },
+    "mounts": [
+        {
+            "source": "minikube-config",
+            "target": "/home/vscode/.minikube",
+            "type": "volume"
+        }
+    ]
+}
