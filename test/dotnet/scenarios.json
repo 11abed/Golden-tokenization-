@@ -1,0 +1,86 @@
+{
+    "install_additional_dotnet": {
+        "image": "ubuntu:focal",
+        "features": {
+            "dotnet": {
+                "version": "latest",
+                "additionalVersions": "6.0.405, 6.0.402,3.1.416"
+            }
+        }
+    },
+    "install_dotnet_lts": {
+        "image": "ubuntu:focal",
+        "features": {
+            "dotnet": {
+                "version": "latest"
+            }
+        }
+    },
+    "install_dotnet_3": {
+        "image": "ubuntu:focal",
+        "features": {
+            "dotnet": {
+                "version": "3"
+            }
+        }
+    },
+    "install_dotnet_6_bullseye": {
+        "image": "debian:bullseye",
+        "features": {
+            "dotnet": {
+                "version": "6"
+            }
+        }
+    },
+    "install_dotnet_6_focal": {
+        "image": "ubuntu:focal",
+        "features": {
+            "dotnet": {
+                "version": "6"
+            }
+        }
+    },
+    "install_dotnet_7_bullseye": {
+        "image": "debian:bullseye",
+        "features": {
+            "dotnet": {
+                "version": "7"
+            }
+        }
+    },
+    "install_dotnet_7_jammy": {
+        "image": "ubuntu:jammy",
+        "features": {
+            "dotnet": {
+                "version": "7"
+            }
+        }
+    },
+    "install_dotnet_runtime": {
+        "image": "ubuntu:jammy",
+        "features": {
+            "dotnet": {
+                "version": "6.0.14",
+                "runtimeOnly": true
+            }
+        }
+    },
+    "build_dotnet_7": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "remoteUser": "vscode",
+        "features": {
+            "dotnet": {
+                "version": "7"
+            }
+        }
+    },
+    "run_dotnet_7": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "remoteUser": "vscode",
+        "features": {
+            "dotnet": {
+                "version": "7"
+            }
+        }
+    }
+}
